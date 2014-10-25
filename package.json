@@ -1,0 +1,21 @@
+{
+  "name": "aquent-responsive",
+  "version": "0.0.1",
+  "description": "files for aquent's responsive design course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "tk"
+  },
+  "author": "pjs",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jade": "^0.13.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-compass": "^1.0.1"
+  }
+}
