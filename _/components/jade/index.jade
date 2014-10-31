@@ -2,26 +2,31 @@ doctype html
 head
   meta(charset='utf-8')
   title Maya Chopra's Portfolio
-  link(ref="stylesheet" href='./_/css/style.css') 
+  meta(name="viewport" content='width=device-width, initial-scale=1')
+  link(rel="stylesheet" href='_/css/style.css') 
   <!--[if lt IE 9]>
   script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
   <![endif]-->
   
 body(lang='en')
-  section
-    h3 Maya Chopra
-    nav
-      ul 
-        li Portfolio
-        li Resume
-        li LinkedIn Profile
-        li Contact
+  div#container-nav
+    section#nav
+      h3 Maya Chopra
+      //
+        nav
+          ul 
+            li Portfolio
+            li Resume
+            li LinkedIn Profile
+            li Contact
 
-    header  
+  div#container-header
+    header#masthead 
       h1 Hi, I'm Maya
         h2 A Boston-based designer/developer hybrid with a passion for user experience and the web
 
-    article
+  div#container-content
+    article#content
       section
         header
           h3 My Portfolio
@@ -43,30 +48,34 @@ body(lang='en')
           h3 My Resume
             p Current/previous positions and skill set
       
-        h4 Currently
-        h5 Designer/Developer
-        h6 Self-employed
-        p.
-          Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith
+        div.box
+          h4 Currently
+          h5 Designer/Developer
+          h6 Self-employed
+          p.
+            Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith
       
-        h4 Previously
-        h5 Lead UI Designer
-        h6 Aquent University
-        p. 
-          Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.
+        div.box
+          h4 Previously
+          h5 Lead UI Designer
+          h6 Aquent University
+          p. 
+            Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.
       
-        h4 Skills
-        ul
-          li Photoshop, Fireworks and Illustrator
-          li HTML5 &amp; CSS3
-          li Responsive Web Design
-          li Mobile App (Native and Web) Design
+        div.box
+          h4 Skills
+          ul
+            li Photoshop, Fireworks and Illustrator
+            li HTML5 &amp; CSS3
+            li Responsive Web Design
+            li Mobile App (Native and Web) Design
 
-  footer 
-    p.
-      For a full work history, have a look at my LinkedIn Profile
-    p. 
-      ©2013 all rights reserved. Fill out a form here to get in touchh
+  div#container-footer
+    footer#colophon
+      p.
+        For a full work history, have a look at my LinkedIn Profile
+      p. 
+        ©2013 all rights reserved. Fill out a form here to get in touchh
     
 
   

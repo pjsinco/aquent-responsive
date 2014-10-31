@@ -2,26 +2,34 @@
 <head>
   <meta charset="utf-8">
   <title>Maya Chopra's Portfolio</title>
-  <link ref="stylesheet" href="./_/css/style.css"><!--[if lt IE 9]>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="_/css/style.css"><!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body lang="en">
-  <section>
-    <h3>Maya Chopra</h3>
-    <nav>
-      <ul> 
-        <li>Portfolio</li>
-        <li>Resume</li>
-        <li>LinkedIn Profile</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-    <header> 
+  <div id="container-nav">
+    <section id="nav">
+      <h3>Maya Chopra</h3>
+      <!--
+      nav
+        ul 
+          li Portfolio
+          li Resume
+          li LinkedIn Profile
+          li Contact
+      
+      -->
+    </section>
+  </div>
+  <div id="container-header">
+    <header id="masthead"> 
       <h1>Hi, I'm Maya
         <h2>A Boston-based designer/developer hybrid with a passion for user experience and the web</h2>
       </h1>
     </header>
-    <article>
+  </div>
+  <div id="container-content">
+    <article id="content">
       <section>
         <header>
           <h3>My Portfolio</h3>
@@ -43,32 +51,40 @@
             <p>Current/previous positions and skill set</p>
           </h3>
         </header>
-        <h4>Currently</h4>
-        <h5>Designer/Developer</h5>
-        <h6>Self-employed</h6>
-        <p>
-          Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith
-          
-        </p>
-        <h4>Previously</h4>
-        <h5>Lead UI Designer</h5>
-        <h6>Aquent University</h6>
-        <p>
-          Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.
-          
-        </p>
-        <h4>Skills</h4>
-        <ul>
-          <li>Photoshop, Fireworks and Illustrator</li>
-          <li>HTML5 &amp; CSS3</li>
-          <li>Responsive Web Design</li>
-          <li>Mobile App (Native and Web) Design</li>
-        </ul>
+        <div class="box">
+          <h4>Currently</h4>
+          <h5>Designer/Developer</h5>
+          <h6>Self-employed</h6>
+          <p>
+            Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith
+            
+          </p>
+        </div>
+        <div class="box">
+          <h4>Previously</h4>
+          <h5>Lead UI Designer</h5>
+          <h6>Aquent University</h6>
+          <p>
+            Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.
+            
+          </p>
+        </div>
+        <div class="box">
+          <h4>Skills</h4>
+          <ul>
+            <li>Photoshop, Fireworks and Illustrator</li>
+            <li>HTML5 &amp; CSS3</li>
+            <li>Responsive Web Design</li>
+            <li>Mobile App (Native and Web) Design</li>
+          </ul>
+        </div>
       </section>
     </article>
-  </section>
-  <footer> 
-    <p>For a full work history, have a look at my LinkedIn Profile</p>
-    <p>©2013 all rights reserved. Fill out a form here to get in touchh</p>
-  </footer>
+  </div>
+  <div id="container-footer">
+    <footer id="colophon">
+      <p>For a full work history, have a look at my LinkedIn Profile</p>
+      <p>©2013 all rights reserved. Fill out a form here to get in touchh</p>
+    </footer>
+  </div>
 </body>

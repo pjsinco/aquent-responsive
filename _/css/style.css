@@ -225,3 +225,43 @@ table {
 td,
 th {
   padding: 0; }
+
+@font-face {
+  font-family: "Roboto Condensed Light";
+  src: url('../../fonts/robotocondensed-light-webfont.woff?1362789692') format('woff'), url('../../fonts/robotocondensed-light-webfont.eot?1362789692') format('embedded-opentype'), url('../../fonts/robotocondensed-light-webfont.ttf?1362789692') format('truetype'), url('../../fonts/robotocondensed-light-webfont.svg?1362789692') format('svg'); }
+/* line 11, ../components/sass/_base.scss */
+body {
+  font-family: 'Roboto Condensed Light', "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* line 15, ../components/sass/_base.scss */
+img {
+  max-width: 100%; }
+
+/* line 10, ../components/sass/style.scss */
+#nav, #masthead, #content, #colophon {
+  margin: 0 18px; }
+
+/* line 14, ../components/sass/style.scss */
+#masthead {
+  color: #fff; }
+
+/* line 18, ../components/sass/style.scss */
+#container-header {
+  background-color: #352a38;
+  height: 350px;
+  width: 100%; }
+
+/* line 24, ../components/sass/style.scss */
+#container-content {
+  padding: 24px 0; }
+
+/* line 28, ../components/sass/style.scss */
+#container-footer {
+  padding: 24px 0;
+  background-color: #352a38;
+  color: #eee;
+  font-weight: 100; }
+
+/* line 35, ../components/sass/style.scss */
+.box {
+  padding: 14px; }
