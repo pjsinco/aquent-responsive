@@ -55,7 +55,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 /*@import 'normalize';*/
-/* line 1, ../components/sass/_variables.scss */
+/* line 4, ../components/sass/_variables.scss */
 p, #resume li {
   font-size: 1.0625em;
   line-height: 1.223;
