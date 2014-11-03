@@ -1,37 +1,15 @@
 @import 'compass';
-@import 'normalize';
+@import 'compass/reset';
+@import 'compass/typography/vertical_rhythm';
+/*@import 'normalize';*/
+
 
 // core partials
 @import 'variables';
 @import 'mixins';
 @import 'base';
 @import 'layout';
+@import 'print';
+@import 'modules/form';
+@import 'modules/nav';
 
-#nav, #masthead, #content, #colophon {
-  margin: 0 18px;
-}
-
-#masthead {
-  color: #fff;
-}
-
-#container-header {
-  background-color: #352a38;
-  height: 350px;
-  width: 100%;
-}
-
-#container-content {
-  padding: 24px 0;
-}
-
-#container-footer {
-  padding: 24px 0;
-  background-color: #352a38;
-  color: #eee;
-  font-weight: 100;
-}
-
-.box {
-  padding: 14px;
-}

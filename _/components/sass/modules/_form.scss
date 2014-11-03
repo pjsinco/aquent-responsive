@@ -1,0 +1,120 @@
+form {
+  padding: 0 0 1.3em;
+
+  ul {
+    list-style: none;
+    padding: 1.3em 0 0;
+  }
+
+  li {
+    padding: 0 0 .65em;
+  }
+
+} // form
+
+legend {
+  font-size: 1.382em;
+  line-height: 1.223;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  line-height: 1.56;
+  padding: 0 0 .325em;
+}
+
+legend,
+label {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.3;
+  font-weight: 500;
+  padding: .65em;
+  @include box-sizing(border-box);
+}
+
+textarea {
+  padding-bottom: 10%;
+  overflow: auto;
+  vertical-align: top;
+}
+
+.send {
+  display: inline-block;
+  max-width: 30em;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background: #0074b0;
+  margin: .65em .26em;
+  padding: .975em;
+  border: 0;
+  @include border-radius(1.3em);
+  @include text-shadow(rgba(0,0,0,.65) 0 -1px 1px);
+
+  &:hover {
+    background: #6f6f6f;
+  }
+
+  &:active,
+  &:focus {
+    background: #555;
+  }
+}
+
+
+@media screen and (min-width: 45em) {
+  .name,
+  .email {
+    float: left;
+    width: 50%;
+    @include box-sizing(border-box);
+  }
+
+  .name {
+    padding-right: .65em;
+  }
+
+  .email {
+    padding-left: .65em;
+  }
+
+  .send {
+    width: 48.6%;
+
+  }
+} // min-width: 45em
+
+@media screen and (min-width: 60em) {
+
+  .name,
+  .email {
+    padding-right: 1.3em;
+    padding-left: 0;
+    /*clear: both;*/
+  }
+
+  .message textarea {
+    width: 50%;
+  }
+
+  .send {
+    width: 25%;
+    margin-left: 50%;
+  }
+
+} // min-width: 60em
+
+

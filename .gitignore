@@ -42,6 +42,7 @@ Thumbs.db
 *.sass-cache*
 
 node_modules/*
+bower_components/*
 
 img/*
 fonts/*

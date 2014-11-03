@@ -1,7 +1,104 @@
+/*advanced checkbox hack*/
+/*timpietrusky.com/advanced-checkbox-hack*/
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  from {padding: 0;}
+  to {padding: 0;}
+}
+
 #container-nav {
   background-color: #fff;
 }
 
-#container-header {
+#nav {
+  padding: .65em 0;
+
+  h3 {
+    text-transform: capitalize;
+    float: left;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0 0;
+    border-bottom: 1px solid #eee;
+    margin: .65em 0 .39em;
+  }
+
+  li {
+    border-top: 1px solid #eee;
+  }
+
+  a {
+    display: block;
+    font-size: 1.063em;
+    color: #333;
+    text-decoration: none;
+    padding: .975em 1.3em;
+
+    &:hover {
+      background: #f8f8f8;
+    }
+  } // a
+
+  nav {
+    height: 0;
+    overflow: hidden;
+  }
+
+  input[type=checkbox] {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+    
+    &:checked ~ nav {
+      height: auto;
+      overflow: hidden;
+    }
+  }
+
+  label {
+    display: block;
+    @include background-image(image-url('icon-menu.png'));
+    background-repeat: no-repeat;
+    background-position: right center;
+    text-indent: -999em;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 45em) {
+    padding: 0;    
+    
+    h3 {
+      margin: .39em 1.3em 0 0;
+    }
+
+    label {
+      display: none;
+    } 
+
+    nav {
+      height: auto;
+      overflow: visible;
+    }
+
+    ul {
+      border: 0;
+      margin: 0;
+    }
+
+    li {
+      display: inline;
+      border: 0;
+    }
+
+    a {
+      display: inline-block;
+
+    }
+  }
   
-}
+} // #nav

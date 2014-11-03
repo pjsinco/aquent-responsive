@@ -7,36 +7,23 @@ head
   <!--[if lt IE 9]>
   script(src="//html5shim.googlecode.com/svn/trunk/html5.js")
   <![endif]-->
-
-  // Picture element HTML5 shiv
-  script document.createElement("picture");
-  script(src='/bower_components/picturefill/dist/picturefill.min.js' async)
   
 body(lang='en')
   div#container-nav
     section#nav.wrapper
       h3 Maya Chopra
-      input(type='checkbox')#toggle
-      label(for='toggle') Menu
-      nav
-        ul 
-          li: a(href='#portfolio') Portfolio
-          li: a(href='#resume') Resume
-          li: a(href='./') LinkedIn Profile
-          li: a(href='#contact') Contact
+      //
+        nav
+          ul 
+            li Portfolio
+            li Resume
+            li LinkedIn Profile
+            li Contact
 
   div#container-header
     header#masthead.wrapper
-      figure#maya
-        picture  
-          <!--[if IE 9]-->
-          video(style='display: none')
-          <!--[endif]-->
-          source(srcset='img/headshot-l.png' media='(min-width: 60em)')
-          source(srcset='img/headshot-m.png' media='(min-width: 45em)')
-          source(srcset='img/headshot-s.png' media='(min-width: 45em)')
-          img(srcset='img/headshot-m.png' alt='Maya Chopra')
-
+      div#maya
+        img(src='/img/headshot-s.png')
       h1 Hi, I'm Maya
         h2 A Boston-based designer/developer hybrid with a passion for user experience and the web
 
@@ -100,7 +87,7 @@ body(lang='en')
             For a full work history, have a look at my LinkedIn Profile
           
   div#container-footer
-    form#contact
+    form
       fieldset.wrapper
         legend Contact
         ul.group
@@ -119,5 +106,6 @@ body(lang='en')
         ©2013 all rights reserved. Fill out a form here to get in touchh
     
 
+  script(src='_/js/script.js')
   script(src='http://localhost:35729/livereload.js')
   

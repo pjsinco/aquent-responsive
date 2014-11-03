@@ -1,0 +1,164 @@
+.wrapper {
+  
+  padding: 0 .65em;
+  @include box-sizing(border-box);
+} // .wrapper
+
+#nav, #masthead, #content, #colophon {
+  margin: 0 3.33%;
+
+  @media screen and (min-width: 45em) {
+    margin: 0 5.5%;
+
+  }
+}
+
+#masthead {
+  color: #fff;
+  width: 80%;
+
+  @media screen and (min-width: 45em) {
+    max-width: 40em;
+  }
+
+  figure {
+    background: rgba(0,0,0,0);
+    @include box-shadow(none);
+
+  }
+
+}
+
+#container-header {
+  background-color: #352a38;
+  padding: 5% 0;
+
+  figure {
+    padding-left: 0;
+  }
+
+  @media screen and (max-width: 45em) {
+    @include background-image(image-url('bg-photo-s.jpg'));
+    background-repeat: no-repeat;
+    background-position: top center;
+    @include background-size(cover);
+  }
+
+  @media screen and (min-width: 45em) {
+    @include background-image(image-url('bg-photo-l.jpg'));
+    background-repeat: no-repeat;
+    background-position: top center;
+    @include background-size(cover);
+  }
+
+}
+
+#container-content {
+  padding: 24px 0;
+}
+
+#container-footer {
+  padding: 24px 0;
+  background-color: #352a38;
+  color: #eee;
+  font-weight: 100;
+  margin-bottom: 320px; /* TEMPORARY */
+
+}
+
+figure,
+.box {
+  background: rgba(0,0,0,0);
+  @include box-shadow(rgba(0,0,0,.1) 0 0 .325em .13em);
+  padding: .975em;
+}
+
+figure {
+  position: relative;
+
+  img,
+  object,
+  embed,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+} // figure
+
+.box {
+  padding: 14px;
+
+  ul {
+    list-style: none;
+    padding: 0 0;
+  }
+
+  h4 {
+    color: #999;
+    border-top: 4px double #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: .975em;
+    text-align: center;
+  }
+} // .box
+
+#resume {
+  li {
+    @extend %font-base;
+  }
+
+  footer {
+    clear: both;
+  }
+}
+
+@media screen and (min-width: 45em) {
+  #portfolio,
+  #resume {
+     @include clearfix;
+  }
+  
+  #portfolio article,
+  #resume article {
+    width: 33.333%;
+    float: left;
+  }
+} // min-width: 45em
+
+#content article {
+  padding-bottom: .65em;
+}
+
+.box:hover {
+  @include box-shadow(rgba(0,0,0,.1) 0 0 .65em .325em);
+
+}
+
+#portfolio {
+  h4 {
+    line-height: 1.82;
+  }
+
+  figure {
+    &:hover {
+      @extend .box:hover;
+      bottom: .25em;
+    }
+
+    @media screen and (max-width: 45em) {
+      max-width: 25em;      
+    }
+  }
+
+  
+}
+
+#maya {
+  width: 25%;
+  height: 0;
+  padding-bottom: 25%;
+
+  img {
+    width: 100%;
+  }
+}

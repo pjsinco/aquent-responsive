@@ -5,24 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="_/css/style.css"><!--[if lt IE 9]>
   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- Picture element HTML5 shiv-->
+  <script>document.createElement("picture");</script>
+  <script src="/bower_components/picturefill/dist/picturefill.min.js" async></script>
 </head>
 <body lang="en">
   <div id="container-nav">
-    <section id="nav">
+    <section id="nav" class="wrapper">
       <h3>Maya Chopra</h3>
-      <!--
-      nav
-        ul 
-          li Portfolio
-          li Resume
-          li LinkedIn Profile
-          li Contact
-      
-      -->
+      <input type="checkbox" id="toggle">
+      <label for="toggle">Menu</label>
+      <nav>
+        <ul> 
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="./">LinkedIn Profile</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </section>
   </div>
   <div id="container-header">
-    <header id="masthead"> 
+    <header id="masthead" class="wrapper">
+      <figure id="maya">
+        <picture>
+           
+          <!--[if IE 9]-->
+          <video style="display: none"></video><!--[endif]-->
+          <source srcset="img/headshot-l.png" media="(min-width: 60em)">
+          <source srcset="img/headshot-m.png" media="(min-width: 45em)">
+          <source srcset="img/headshot-s.png" media="(min-width: 45em)"><img srcset="img/headshot-m.png" alt="Maya Chopra">
+        </picture>
+      </figure>
       <h1>Hi, I'm Maya
         <h2>A Boston-based designer/developer hybrid with a passion for user experience and the web</h2>
       </h1>
@@ -30,61 +44,99 @@
   </div>
   <div id="container-content">
     <article id="content">
-      <section>
-        <header>
+      <section id="portfolio">
+        <header class="wrapper">
           <h3>My Portfolio</h3>
           <p>Some of the things I've been working on lately</p>
         </header>
-        <h4>Vitamin T Homepage
-          <figure><img src="./img/vitamin-t.png"></figure>
-        </h4>
-        <h4>RoboHead iPad App
-          <figure><img src="./img/robohead.png"></figure>
-        </h4>
-        <h4>Shareist Homepage
-          <figure><img src="./img/shareist.png"></figure>
-        </h4>
+        <article class="group wrapper">
+          <h4>Vitamin T Homepage</h4><a href="/work/vitamin-t">
+            <figure><img src="./img/vitamin-t.png"></figure></a>
+        </article>
+        <article class="group wrapper">
+          <h4>RoboHead iPad App</h4><a href="/work/robohead">
+            <figure><img src="./img/robohead.png"></figure></a>
+        </article>
+        <article class="group wrapper">
+          <h4>Shareist Homepage</h4><a href="/work/shareist">
+            <figure><img src="./img/shareist.png"></figure></a>
+        </article>
       </section>
-      <section> 
-        <header>
-          <h3>My Resume
-            <p>Current/previous positions and skill set</p>
-          </h3>
+      <section id="resume">
+        <header class="wrapper">
+          <h3>My Resume</h3>
+          <p>Current/previous positions and skill set</p>
         </header>
-        <div class="box">
-          <h4>Currently</h4>
-          <h5>Designer/Developer</h5>
-          <h6>Self-employed</h6>
+        <article class="wrapper">
+          <div class="box">
+            <h4>Currently</h4>
+            <h5>Designer/Developer</h5>
+            <h6>Self-employed</h6>
+            <p>
+              Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith
+              
+            </p>
+          </div>
+        </article>
+        <article class="wrapper">
+          <div class="box">
+            <h4>Previously</h4>
+            <h5>Lead UI Designer</h5>
+            <h6>Aquent University</h6>
+            <p>
+              Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.
+              
+            </p>
+          </div>
+        </article>
+        <article class="wrapper">
+          <div class="box">
+            <h4>Skills</h4>
+            <ul>
+              <li>Photoshop, Fireworks and Illustrator</li>
+              <li>HTML5 &amp; CSS3</li>
+              <li>Responsive Web Design</li>
+              <li>Mobile App (Native and Web) Design</li>
+            </ul>
+          </div>
+        </article>
+        <footer class="wrapper">
           <p>
-            Design and development for a two-person studio in Boston, MA. Clients include Boston Red Sox, Sam Adams and Aerosmith
+            For a full work history, have a look at my LinkedIn Profile
             
           </p>
-        </div>
-        <div class="box">
-          <h4>Previously</h4>
-          <h5>Lead UI Designer</h5>
-          <h6>Aquent University</h6>
-          <p>
-            Lead designer and theme developer for AU's home-built CMS. Worked with several other groups at the university as well.
-            
-          </p>
-        </div>
-        <div class="box">
-          <h4>Skills</h4>
-          <ul>
-            <li>Photoshop, Fireworks and Illustrator</li>
-            <li>HTML5 &amp; CSS3</li>
-            <li>Responsive Web Design</li>
-            <li>Mobile App (Native and Web) Design</li>
-          </ul>
-        </div>
+        </footer>
       </section>
     </article>
   </div>
   <div id="container-footer">
-    <footer id="colophon">
-      <p>For a full work history, have a look at my LinkedIn Profile</p>
-      <p>©2013 all rights reserved. Fill out a form here to get in touchh</p>
+    <form id="contact">
+      <fieldset class="wrapper">
+        <legend>Contact</legend>
+        <ul class="group">
+          <li class="name">
+            <label for="name">Your name</label>
+            <input type="text" name="name" id="name">
+          </li>
+          <li class="email">
+            <label for="email">Your email</label>
+            <input type="text" name="email" id="email">
+          </li>
+          <li class="message">
+            <label for="message">Say Hello</label>
+            <textarea name="message" id="message"></textarea>
+          </li>
+        </ul>
+        <input type="submit" name="submit" value="send" class="send">
+      </fieldset>
+    </form>
+    <footer id="colophon" class="wrapper">
+      <p>
+        ©2013 all rights reserved. Fill out a form here to get in touchh
+        
+        
+      </p>
     </footer>
   </div>
+  <script src="http://localhost:35729/livereload.js"></script>
 </body>

@@ -1,0 +1,25 @@
+{
+  "name": "aquent-responsive",
+  "version": "0.0.1",
+  "homepage": "https://github.com/pjsinco/aquent-responsive",
+  "authors": [
+    "Patrick Sinco <psinco@gmail.com>"
+  ],
+  "description": "project for aquent class on responsive web design",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "picturefill": "~2.1.0"
+  }
+}
